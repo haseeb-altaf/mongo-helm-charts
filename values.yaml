@@ -1,0 +1,46 @@
+mongodb:
+  username: admin
+  password: password
+
+# Mongo Express settings
+mongoExpress:
+  # Comment out or remove this if you want Kubernetes to assign a NodePort automatically
+  nodePort: 30001
+
+# Service settings
+service:
+  type: ClusterIP
+
+# Ingress settings
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+
+# Autoscaling settings
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+# Resources settings
+resources: {}
+  # requests:
+  #   memory: "64Mi"
+  #   cpu: "250m"
+  # limits:
+  #   memory: "128Mi"
+  #   cpu: "500m"
+
+# NodeSelector settings
+nodeSelector: {}
+
+# Tolerations settings
+tolerations: []
+
+# Affinity settings
+affinity: {}
